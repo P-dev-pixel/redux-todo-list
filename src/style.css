@@ -1,0 +1,166 @@
+body{
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg,#f5f7fa,#c3cfe2);
+  margin:0;
+  padding:0;
+}
+
+.container{
+  max-width:450px;
+  width:90%;
+  margin:60px auto;
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1{
+  text-align:center;
+  margin-bottom:20px;
+  color:#333;
+}
+
+/* Add Task Section */
+
+.addTask{
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.addTask input{
+  flex:1;
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  outline:none;
+  font-size:14px;
+  background-color: #fff;
+}
+
+.addTask input:focus{
+  border-color:#4a90e2;
+}
+
+.addTask button{
+  background:#4a90e2;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.addTask button:hover{
+  background:#357bd8;
+}
+
+/* Task List */
+
+.taskList{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.taskList li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px;
+  margin-bottom:8px;
+  border-radius:6px;
+  background:#f9f9f9;
+  transition:0.2s;
+}
+
+.taskList li:hover{
+  background:#f1f1f1;
+}
+
+/* Task text */
+
+.taskList li span{
+  cursor:pointer;
+  flex:1;
+  font-size:14px;
+}
+
+/* Action Buttons */
+
+.actions{
+  display:flex;
+  gap:5px;
+}
+
+.actions button{
+  border:none;
+  padding:6px 10px;
+  border-radius:5px;
+  font-size:12px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.actions button:nth-child(1){
+  background:#ffc107;
+}
+
+.actions button:nth-child(1):hover{
+  background:#e0a800;
+}
+
+.actions button:nth-child(2){
+  background:#dc3545;
+  color:white;
+}
+
+.actions button:nth-child(2):hover{
+  background:#c82333;
+}
+
+/* Completed task */
+
+.done span{
+  text-decoration:line-through;
+  color:#999;
+}
+.taskList input{
+    background-color: #fff;
+    color: black;
+    border: 0px;
+    outline: 0px;
+    border-radius: 5px;
+}
+
+/* Responsive */
+
+@media (max-width:500px){
+
+  .container{
+    margin:30px auto;
+    padding:20px;
+  }
+
+  .addTask{
+    flex-direction:column;
+  }
+
+  .addTask button{
+    width:100%;
+  }
+
+  .taskList li{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+
+  .actions{
+    width:100%;
+    justify-content:flex-end;
+  }
+
+}
